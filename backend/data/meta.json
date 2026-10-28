@@ -1,0 +1,7 @@
+{
+  "fetchedAt": "2026-10-28T14:25:19Z",
+  "source": "https://data.elexon.co.uk/bmrs/api/v1",
+  "actualRows": 1488,
+  "forecastRows": 19856,
+  "forecastRuns": 272
+}
