@@ -1,0 +1,7 @@
+# Runtime deps for the Vercel Python function (api/index.py). Kept lean:
+# no uvicorn (Vercel provides the server). Mirrors backend/requirements.txt.
+fastapi==0.115.6
+pandas==2.3.3
+numpy==2.2.6
+pydantic==2.10.4
+httpx==0.28.1
