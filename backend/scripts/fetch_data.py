@@ -42,11 +42,15 @@ def main() -> None:
     }
     (settings.data_dir / "meta.json").write_text(json.dumps(meta, indent=2) + "\n")
 
-    print(f"actuals:   {len(actuals):>6} rows  "
-          f"{actuals.startTime.min()} -> {actuals.startTime.max()}")
-    print(f"forecasts: {len(forecasts):>6} rows  "
-          f"published {forecasts.publishTime.min()} -> {forecasts.publishTime.max()}  "
-          f"({meta['forecastRuns']} runs)")
+    print(
+        f"actuals:   {len(actuals):>6} rows  "
+        f"{actuals.startTime.min()} -> {actuals.startTime.max()}"
+    )
+    print(
+        f"forecasts: {len(forecasts):>6} rows  "
+        f"published {forecasts.publishTime.min()} -> {forecasts.publishTime.max()}  "
+        f"({meta['forecastRuns']} runs)"
+    )
     print("\nsample actuals:\n", actuals.head(3).to_string(index=False))
     print("\nsample forecasts:\n", forecasts.head(3).to_string(index=False))
 
