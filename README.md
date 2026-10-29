@@ -1,5 +1,7 @@
 # UK Wind Forecast Monitor
 
+[![CI](https://github.com/agarwal0007/uk-wind-forecast-monitor/actions/workflows/ci.yml/badge.svg)](https://github.com/agarwal0007/uk-wind-forecast-monitor/actions/workflows/ci.yml)
+
 A pilot dashboard for a GB day-ahead power trading desk. It shows **the wind forecast that was actually available when a purchase decision had to be made**, compares it with metered wind generation, and turns the errors into a sizing rule: *"to be 90% safe, assume wind comes in X MW below forecast."*
 
 National-level wind only. Data comes from Elexon (WINDFOR forecasts, FUELHH outturn) for delivery from 2 Jan to 1 Feb 2026, which covers purchase decisions made in January 2026.
