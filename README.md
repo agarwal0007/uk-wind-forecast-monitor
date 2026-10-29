@@ -4,7 +4,7 @@ A pilot dashboard for a GB day-ahead power trading desk. It shows **the wind for
 
 National-level wind only. Data comes from Elexon (WINDFOR forecasts, FUELHH outturn) for delivery from 2 Jan to 1 Feb 2026, which covers purchase decisions made in January 2026.
 
-**Live app:** LIVE_URL_HERE
+**Live app:** https://wind-forecast-monitor-sepia.vercel.app  (try [decision mode](https://wind-forecast-monitor-sepia.vercel.app/?mode=decision&cutoff=09:00))
 
 ![Dashboard](docs/screenshots/dashboard-light.png)
 
@@ -246,12 +246,12 @@ Python dependencies come from the lean root `requirements.txt`, about 136 MB ins
 npm i -g vercel
 vercel login
 vercel link            # create/link the project; accept the repo root as the root directory
-vercel deploy --prod   # prints the production URL -> paste it into LIVE_URL_HERE above
+vercel deploy --prod   # prints the production URL
 ```
 
 Or import the GitHub repo in the Vercel dashboard. `vercel.json` already sets the build, install and output, so leave the framework preset as **Other**.
 
-**Disable Deployment Protection** so the URL works in an incognito window: Project → Settings → Deployment Protection → set Vercel Authentication to **Disabled**.
+**Deployment Protection:** the URL must work in an incognito window. With Vercel's default *Standard Protection*, only preview URLs require a Vercel login, and the production domain is public; this was verified for the live URL above. If the production URL ever asks for a login, set Project → Settings → Deployment Protection → Vercel Authentication to **Disabled**.
 
 After deploying, check `https://<url>/api/health` and `https://<url>/?mode=decision`.
 
